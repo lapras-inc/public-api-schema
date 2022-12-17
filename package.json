@@ -9,11 +9,13 @@
   "dependencies": {},
   "devDependencies": {
     "@redocly/cli": "^1.0.0-beta.117",
+    "gh-pages": "^4.0.0",
     "redoc-cli": "^0.13.20"
   },
   "scripts": {
     "preview": "redocly preview-docs reference/LAPRAS-public-API.yaml",
     "lint": "redocly lint reference/LAPRAS-public-API.yaml",
-    "build": "npm run lint && redoc-cli build reference/LAPRAS-public-API.yaml --output dist/index.html"
+    "build": "npm run lint && redoc-cli build reference/LAPRAS-public-API.yaml --output dist/index.html",
+    "deploy": "gh-pages -d dist"
   }
 }
