@@ -113,6 +113,7 @@ type Response = {
     date: string;
     type:
       | "github"
+      | "github_pr"
       | "speaker_deck"
       | "qiita"
       | "zenn"
