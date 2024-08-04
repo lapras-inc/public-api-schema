@@ -1,6 +1,9 @@
 # public-api-schema
 LAPRAS公開ページAPIの仕様書です。
 
+## OpenAPI 定義
+- [OpenAPI Specification file](openapi/openapi.yml)
+- [OpenAPI Doc](https://lapras-inc.github.io/public-api-schema/)
 
 ## URL
 

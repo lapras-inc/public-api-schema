@@ -1,0 +1,14 @@
+{
+  "name": "public-api-schema",
+  "version": "1.0.0",
+  "author": "LAPRAS Inc.",
+  "private": true,
+  "dependencies": {
+    "@redocly/cli": "^1.19.0"
+  },
+  "scripts": {
+    "lint": "redocly lint",
+    "preview-docs": "redocly preview-docs",
+    "build-docs": "npm run lint && redocly build-docs -o dist/index.html"
+  }
+}

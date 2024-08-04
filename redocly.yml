@@ -1,0 +1,22 @@
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  lapras-public-api@v1: 
+    root: openapi/openapi.yml
+extends:
+  - recommended
+rules:
+  no-unused-components: error
+  no-server-example.com: off
+theme:
+  openapi:
+    theme:
+      colors:
+        primary:
+          main: "#32329f"
+    generateCodeSamples:
+      languages:  # Array of language config objects; indicates in which languages to generate code samples.
+        - lang: curl
+        - lang: Node.js
+        - lang: JavaScript
+        - lang: PHP
+        - lang: Python
