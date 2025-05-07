@@ -17,7 +17,7 @@ GET https://lapras.com/public/<:share_id>.json
 | --- | --- | --- | --- |
 | name | string  | LAPRAS登録のユーザー名  | `"LAPRAS太郎"`  |
 | description | string  | LAPRAS登録のユーザー概要 | `"LAPRAS株式会社のソフトウェアエンジニアです。"` |
-| e_score | number | 技術力スコア | `3.4` |
+| e_score | number | 技術力スコア | `3.4` ※ scoreが計算不可能な場合は0が返ります。 |
 | b_score | number  | ビジネス力スコア | `3.1` |
 | i_score | number | 影響力スコア | `2.2` |
 | qiita_articles | arrary | Qiita記事 | `[{"title": "hogehoge", "url": "https://qiita.com/hogehoge"}, "tags" ["foo"], "headlines": ["bar"], "stockers_count": 3, "updated_at": "020-07-26T08:10:11"]` |
