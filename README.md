@@ -131,7 +131,8 @@ type Response = {
       | "note"
       | "teratail"
       | "blog"
-      | "connpass";
+      | "connpass"
+      | "hatena_blog";
   }[];
 };
 ```

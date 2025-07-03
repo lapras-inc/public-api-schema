@@ -188,6 +188,7 @@ components:
                   - teratail
                   - blog
                   - connpass
+                  - hatena_blog
                 type: string
               url:
                 type: string
