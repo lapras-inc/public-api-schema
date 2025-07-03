@@ -112,6 +112,13 @@ components:
                 - string
               title: string
               url: http://example.com
+          hatena_articles:
+            - url: 'http://example.com'
+              title: string
+              bookmark_count: 0
+              tags:
+                - string
+              published_at: '2019-08-24T14:15:22Z'
           speaker_deck_slides:
             - description: string
               presentation_date: '2019-08-24T14:15:22Z'
@@ -181,6 +188,7 @@ components:
                   - teratail
                   - blog
                   - connpass
+                  - hatena_blog
                 type: string
               url:
                 type: string
@@ -203,6 +211,27 @@ components:
               url:
                 type: string
                 format: uri
+        hatena_articles:
+          type: array
+          items:
+            additionalProperties: false
+            type: object
+            properties:
+              url:
+                type: string
+                format: uri
+              title:
+                type: string
+              bookmark_count:
+                type: number
+              tags:
+                type: array
+                items:
+                  additionalProperties: false
+                  type: string
+              published_at: 
+                type: string
+                format: date
         events:
           type: array
           items:

@@ -24,6 +24,7 @@ GET https://lapras.com/public/<:share_id>.json
 | zenn_articles | array  | Zenn記事 | `[{"title": "hoge", "url": "https://zenn.dev/hoge", "tags": ["foo"], "posted_at": "2022-10-03T08:36:43"}]`  |
 | blog_articles | array | ブログ記事 | `[{"title": "hoge", "url": "https://blog.com/hoge", "tags": ["foo"], "posted_at": "2022-10-03T08:36:43"}]` |
 | note_articles | array | note記事 |  `[{"title": "hoge", "url": "https://note.com/hoge", "tags": ["foo"], like_count: 3, "published_at": "2022-10-03T08:36:43"}]`|
+| hatena_articles | array | はてなブログ記事 | `[{"title": "hoge", "url": "https://hoge.hatenablog.com/entry/foo", "tags": ["foo"], "bookmark_count": 5, "published_at": "2022-10-03"}]` |
 | speaker_deck_slides | array | SpeakerDeckスライド | ` [{"title": "hoge", "url": "https://speakerdeck.com/hoge", "tags": ["foo"], "description": "foo", "view_count": 1, "star_count": 2, "presentation_date": "2022-10-03T08:36:43"}]` |
 | github_repositories | array | GitHubリポジトリ | `[{"id": 1, "title": "lapras-inc/foo", "url": "https://github.com/lapras-inc/foo", "is_oss": false, "is_fork": false, "is_owner": true, "description": "bar", "stargazers_count": 211, "stargazers_url": "https://github.com/lapras-inc/foo/stargazers", "forks": 22, "contributors_count": 14, "contributors_url": "https://github.com/lapras-inc/foo/graphs/contributors", "contributions": 313, "contributions_url": "https://github.com/klapras-inc/foo/g/commits?author=hoge", "language": "TypeScript", "languages": [{"name": "TypeScript", "bytes": 74882}]}]` |
 | teratail_replies | array  | Teratailの回答 | `[{"title": "hoge", "url": "https://teratail.com/hoge", "is_best_answer": true, "tags": ["TypeScript"], "created_at": "2020-07-09T20:22:46"}]` |
@@ -64,6 +65,13 @@ type Response = {
     title: string;
     tags: string[];
     like_count: number;
+    published_at: string;
+  }[];
+  hatena_articles: { // はてなブログ記事
+    url: string;
+    title: string;
+    bookmark_count: number;
+    tags: string[];
     published_at: string;
   }[];
   speaker_deck_slides: { // speaker deckスライド
@@ -123,7 +131,8 @@ type Response = {
       | "note"
       | "teratail"
       | "blog"
-      | "connpass";
+      | "connpass"
+      | "hatena_blog";
   }[];
 };
 ```
